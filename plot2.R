@@ -10,6 +10,8 @@ data<-read.table("household_power_consumption.txt",		##read the data
 good<-((data$"Date"=="1/2/2007")|(data$"Date"=="2/2/2007")) ##select the dates given
 qdata<-data[good,]
 
+
+
 png(filename = "plot2.png", width = 480, height = 480, units = "px") ##launch png device
 plot(1:2880, qdata$"Global_active_power",type="l",main="",xlab="",
 	ylab="Global Active Power (kilowatts)")
